@@ -14,7 +14,10 @@ public class App
     public static void main(String[] args) throws IllegalArgumentException, IOException, URISyntaxException
     {    	
     	String protocol = Settings.BASE_PROTOCOL;
-        String port = ""; // ":" + Settings.BASE_PORT;
+        String port = "8080"; // System.getenv("PORT"); // ":" + Settings.BASE_PORT;
+        // if (port == null || port.isEmpty()) {
+        //    port = "8080";
+        // }
         String hostname = InetAddress.getLocalHost().getHostAddress();
         String path = Settings.SERVICE_PATH;
         if (hostname.equals(Settings.BASE_URL))
@@ -22,7 +25,7 @@ public class App
             hostname = "localhost";
         }
 
-        URI baseUrl = new URI(protocol + hostname + port + path);
+        URI baseUrl = new URI(protocol + hostname + ":" + port + path);
         System.out.println("Starting sdelab standalone HTTP server..");
         JdkHttpServerFactory.createHttpServer(baseUrl, createApp());
         System.out.println("server starts on " + baseUrl + "\n [kill the process to exit]");
