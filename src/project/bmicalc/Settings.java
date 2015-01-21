@@ -8,7 +8,7 @@ public final class Settings {
 	
 	public static final String BASE_PROTOCOL = "http://";
 	public static final String BASE_URL = "localhost";
-	public static final String BASE_PORT = "80";
+	public static final String BASE_PORT = "5000";
 	public static final String SERVICE_PATH = "/bmicalc-service/";
 	
 }
