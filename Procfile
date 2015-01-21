@@ -1,1 +1,1 @@
-web:    java $JAVA_OPTS -Ddw.server.connector.port=$PORT -cp target/classes:target/dependency/* project.bmicalc.App
+web:    java $JAVA_OPTS -Ddw.server.connector.port=8080 -cp target/classes:target/dependency/* project.bmicalc.App
