@@ -14,9 +14,9 @@ public class App
     public static void main(String[] args) throws IllegalArgumentException, IOException, URISyntaxException
     {    	
     	String protocol = Settings.BASE_PROTOCOL;
-        String port = System.getenv("PORT"); // ":" + Settings.BASE_PORT;
+        String port = System.getenv("PORT");
         if (port == null || port.isEmpty()) {
-            port = "8080";
+            port = Settings.BASE_PORT;
         }
         String hostname = InetAddress.getLocalHost().getHostAddress();
         String path = Settings.SERVICE_PATH;
