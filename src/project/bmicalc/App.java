@@ -14,7 +14,7 @@ public class App
     public static void main(String[] args) throws IllegalArgumentException, IOException, URISyntaxException
     {    	
     	String protocol = Settings.BASE_PROTOCOL;
-        String port = "8000"; // System.getenv("PORT"); // ":" + Settings.BASE_PORT;
+        String port = "8080"; // System.getenv("PORT"); // ":" + Settings.BASE_PORT;
         // if (port == null || port.isEmpty()) {
         //    port = "8080";
         // }
